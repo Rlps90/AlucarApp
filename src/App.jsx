@@ -1,14 +1,27 @@
-import CarrosAluguel from './CarrosAluguel'
-import Navbar from './Navbar'
-
+import CarrosAluguel from './pages/CarrosAluguel'
+import Navbar from './Components/Navbar'
+import Home from './pages/Home'
+import About from './pages/About'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 	return (
 		<main>
-      <Navbar />
-			<h4>Alugue seu carro agora mesmo!</h4>
-			<h4>Faça sua reserva</h4>
-      <CarrosAluguel />
+			<Navbar />
+			<Routes>
+				<Route
+					path=""
+					element={<Home />}
+				/>
+				<Route
+					path="/about"
+					element={<About />}
+				/>
+				<Route
+					path="/carros"
+					element={<CarrosAluguel />}
+				/>
+			</Routes>
 		</main>
 	)
 }
