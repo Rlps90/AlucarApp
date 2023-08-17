@@ -26,7 +26,7 @@ const Navbar = () => {
 	]
 
 	return (
-		<nav className="flex flex-row flex-nowrap justify-between items-center">
+		<nav className="flex flex-row flex-nowrap justify-between items-center bg-gradient-to-b from-emerald-900 to-emerald-500 pb-1">
 			<a
 				href="/"
 				className="flex-initial text-2xl pl-2 uppercase font-bold">
@@ -34,7 +34,7 @@ const Navbar = () => {
 			</a>
 			<Button
 				type="button"
-				className="">
+				className="fixed right-10 text-xl text-scallop">
 				<Link to={`CRUD/Create`}>Login</Link>
 			</Button>
 

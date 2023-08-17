@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 
 function App() {
 	return (
-		<main>
+		<main className='bg-gradient-to-b from-emerald-500 to-emerald-900 text-rose-200'>
 			<Navbar />
 			<Routes>
 				<Route

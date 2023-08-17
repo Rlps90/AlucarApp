@@ -1,4 +1,4 @@
 const Title = ({ text }) => {
-	return <div className="title">{text || 'Titulo'}</div>
+	return <div>{text || 'Titulo'}</div>
 }
 export default Title
