@@ -34,7 +34,7 @@ const Navbar = () => {
 			</a>
 			<Button
 				type="button"
-				className="fixed right-10 text-xl text-scallop">
+				className="absolute right-10 text-xl text-scallop">
 				<Link to={`CRUD/Create`}>Login</Link>
 			</Button>
 

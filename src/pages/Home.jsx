@@ -7,7 +7,7 @@ import Button from '@mui/material/Button'
 const Home = () => {
 	return (
 		<>
-			<div className='bg-[url("/src/assets/hero-bg.jpg")]'>
+			<div className='bg-[url("/src/assets/hero-bg.jpg")] '>
 				<div className="font-bold tracking-wide pt-6 drop-shadow-md">
 					<h1 className='text-4xl'>Faça sua reserva agora</h1>
 				</div>
@@ -18,7 +18,7 @@ const Home = () => {
 							alt="logo"
 							className="max-w-xs rounded-md"
 						/>
-						<BasicDateCalendar className='bg-white'/>
+						<BasicDateCalendar />
 						<BasicDateCalendar />
 						<Autocomplete
 							disablePortal
@@ -30,7 +30,7 @@ const Home = () => {
 									placeholder="Carros"
 								/>
 							)}
-							getOptionLabel={(carro) => carro.marc+ ' ' + carro.modelo}
+							getOptionLabel={(carro) => carro.marca + ' ' + carro.modelo}
 						/>
 						<Button variant="contained" className='justify-self-center bg-pink-900 '>Reservar</Button>
 					</div>
