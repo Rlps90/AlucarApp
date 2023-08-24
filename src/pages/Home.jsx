@@ -7,11 +7,11 @@ import Button from '@mui/material/Button'
 const Home = () => {
 	return (
 		<>
-			<div className='bg-[url("/src/assets/hero-bg.jpg")] '>
+			<div className='bg-[url("/src/assets/hero-bg.jpg")]'>
 				<div className="font-bold tracking-wide pt-6 drop-shadow-md">
-					<h1 className='text-4xl'>Faça sua reserva agora</h1>
+					<h1 className="text-4xl">Faça sua reserva agora</h1>
 				</div>
-				<div className='w-full h-full flex items-center justify-center py-8 '>
+				<div className="w-full h-full flex items-center justify-center py-8 ">
 					<div className="grid gap-4 shadow-2xl max-w-md rounded-lg p-8 bg-gradient-to-b from-emerald-500 to-emerald-900">
 						<img
 							src={logo}
@@ -32,7 +32,11 @@ const Home = () => {
 							)}
 							getOptionLabel={(carro) => carro.marca + ' ' + carro.modelo}
 						/>
-						<Button variant="contained" className='justify-self-center bg-pink-900 '>Reservar</Button>
+						<Button
+							variant="contained"
+							className="justify-self-center bg-rose-400 hover:bg-rose-800">
+							Reservar
+						</Button>
 					</div>
 				</div>
 			</div>

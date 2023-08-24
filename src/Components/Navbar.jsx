@@ -1,73 +1,36 @@
 import Title from './Title'
-import { Link } from 'react-router-dom'
-import { Divide as Hamburger } from 'hamburger-react'
-import { useState } from 'react'
+import DrawerComp from './DrawerComp'
+import { Route, Routes, Link } from 'react-router-dom'
 import { Button } from '@mui/material'
+import Crud from './CRUD/Crud'
 
 const Navbar = () => {
-	const [isOpen, setIsOpen] = useState(false)
-
-	const MENU = [
-		{
-			id: 1,
-			title: 'Home',
-			link: '/',
-		},
-		{
-			id: 2,
-			title: 'About',
-			link: '/about',
-		},
-		{
-			id: 3,
-			title: 'Cars',
-			link: '/carros',
-		},
-	]
-
 	return (
-		<nav className="flex flex-row flex-nowrap justify-between items-center bg-gradient-to-b from-emerald-900 to-emerald-500 pb-1">
-			<a
-				href="/"
-				className="flex-initial text-2xl pl-2 uppercase font-bold">
-				<Title text="Alucar" />
-			</a>
-			<Button
-				type="button"
-				className="absolute right-10 text-xl text-scallop">
-				<Link to={`CRUD/Create`}>Login</Link>
-			</Button>
+		<>
+			<nav className="relative flex items-center bg-gradient-to-b from-emerald-900 to-emerald-500 pb-4">
+				<a
+					href="/"
+					className="mr-3 flex-none w-[2.0625rem] overflow-hidden md:w-auto text-2xl pl-2 uppercase font-bold">
+					<Title text="Alucar" />
+				</a>
+				<Button
+					type="button"
+					className="relative ml-auto -my-1 flex items-center justify-center text-rose-200 hover:text-rose-400 text-xl">
+					<Link to={`CRUD/Crud`}>Login</Link>
+				</Button>
 
-			<div className="justify-self-end">
-				{isOpen ? (
-					<>
-						<Hamburger
-							toggled={isOpen}
-							rounded
-							toggle={setIsOpen}
-						/>
-						<Title text="Alucar" />
-						<ul className="burger-nav">
-							{MENU.map((item) => {
-								const { id, title, link } = item
-								return (
-									<li key={id}>
-										<a href={link}>{title}</a>
-									</li>
-								)
-							})}
-						</ul>
-					</>
-				) : (
-					<Hamburger
-						toggled={isOpen}
-						rounded
-						toggle={setIsOpen}
-						className="burger-btn"
-					/>
-				)}
-			</div>
-		</nav>
+				<div className="ml-2 -my-1 lg:hidden">
+					<DrawerComp />
+				</div>
+			</nav>
+
+			<Routes>
+				<Route
+					path="/CRUD/Crud"
+					element={<Crud />}
+				/>
+			</Routes>
+		</>
 	)
 }
 export default Navbar

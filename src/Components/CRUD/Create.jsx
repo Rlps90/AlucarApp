@@ -16,38 +16,40 @@ const Create = () => {
 	}
 
 	return (
-		<Form className="create-form">
-			<Form.Field>
-				<label>First Name</label>
-				<input
-					type="text"
-					name="first-name"
-					placeholder="First Name"
-					onChange={(e) => setFirstName(e.target.value)}
-				/>
-			</Form.Field>
-			<Form.Field>
-				<label>Last Name</label>
-				<input
-					type="text"
-					name="last-name"
-					placeholder="Last Name"
-					onChange={(e) => setLastName(e.target.value)}
-				/>
-			</Form.Field>
-			<Form.Field>
-				<Checkbox
-					label="I agree to the Terms and Conditions"
-					onChange={() => setCheckbox(!checkbox)}
-				/>
-			</Form.Field>
-			<Button
-				className="ui button"
-				type="submit"
-				onClick={postData}>
-				Submit
-			</Button>
-		</Form>
+		<div className="text-white font-serif h-fit">
+			<Form className="space-y-4">
+				<Form.Field>
+					<input
+						type="text"
+						name="first-name"
+						placeholder="Nome"
+						onChange={(e) => setFirstName(e.target.value)}
+						className="text-black rounded"
+					/>
+				</Form.Field>
+				<Form.Field>
+					<input
+						type="text"
+						name="last-name"
+						placeholder="Sobrenome"
+						onChange={(e) => setLastName(e.target.value)}
+						className="text-black rounded"
+					/>
+				</Form.Field>
+				<Form.Field>
+					<Checkbox
+						label="Aceito Termos e Condições"
+						onChange={() => setCheckbox(!checkbox)}
+					/>
+				</Form.Field>
+				<Button
+					className="p-2 border-b-2 border-r-2 rounded-lg border-slate-600 shadow-md bg-rose-400 hover:bg-rose-800"
+					type="submit"
+					onClick={postData}>
+					Cadastrar
+				</Button>
+			</Form>
+		</div>
 	)
 }
 export default Create
