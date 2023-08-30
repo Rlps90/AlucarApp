@@ -3,24 +3,24 @@ import { carros } from '../data'
 
 const CarrosAluguel = () => {
 	const [carrosDisponiveis, setCarrosDisponiveis] = useState(carros)
+	
 
 	return (
-		<section className="carrosDisponiveis">
+		<section className="flex flex-row bg-auto text-black gap-5">
 			{carrosDisponiveis.map((carro) => {
 				const { id, marca, modelo, valor, imagem } = carro
 				return (
 					<article
-						className="carro"
-						key={id}>
+						key={id}
+						className="">
 						<img
 							src={imagem}
 							alt={modelo}
-							className="carImg"
 						/>
-						<h5>
+						<h5 className='text-xl italic'>
 							{marca} {modelo}
 						</h5>
-						<p>R${valor}/dia</p>
+						<p className='font-bold'>R${valor}/dia</p>
 					</article>
 				)
 			})}

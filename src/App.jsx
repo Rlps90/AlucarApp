@@ -13,7 +13,7 @@ const theme = createTheme({
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
-			<main className="bg-gradient-to-b from-emerald-500 to-emerald-900 text-rose-200 h-screen">
+			<main className="bg-gradient-to-b from-emerald-500 to-emerald-900 text-zinc-200 h-screen">
 				<Navbar />
 				<Routes>
 					<Route

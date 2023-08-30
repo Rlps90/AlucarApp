@@ -3,23 +3,36 @@ import { carros } from '../data'
 import BasicDateCalendar from '../Components/BasicDateCalendar'
 import logo from '../assets/alucar-logo.png'
 import Button from '@mui/material/Button'
+import { useState } from 'react'
 
 const Home = () => {
+	const [dayStart, setDayStart] = useState(null)
+	const [dayEnd, setDayEnd] = useState(null)
+
 	return (
 		<>
 			<div className='bg-[url("/src/assets/hero-bg.jpg")]'>
 				<div className="font-bold tracking-wide pt-6 drop-shadow-md">
-					<h1 className="text-4xl">Faça sua reserva agora</h1>
+					<h1 className="text-4xl italic">Faça sua reserva agora</h1>
 				</div>
-				<div className="w-full h-full flex items-center justify-center py-8 ">
-					<div className="grid gap-4 shadow-2xl max-w-md rounded-lg p-8 bg-gradient-to-b from-emerald-500 to-emerald-900">
+				<section className="flex flex-col w-full h-full items-center justify-center py-8">
+					<div className="max-w-xs pb-10">
 						<img
 							src={logo}
 							alt="logo"
-							className="max-w-xs rounded-md"
+							className="rounded-md"
 						/>
-						<BasicDateCalendar />
-						<BasicDateCalendar />
+					</div>
+
+					<form className="flex flex-col gap-4">
+						<BasicDateCalendar
+							value={dayStart}
+							onChange={(e) => setDayStart(e.target.value)}
+						/>
+						<BasicDateCalendar
+							value={dayEnd}
+							onChange={(e) => setDayEnd(e.target.value)}
+						/>
 						<Autocomplete
 							disablePortal
 							id="escolhaCarros"
@@ -37,8 +50,8 @@ const Home = () => {
 							className="justify-self-center bg-rose-400 hover:bg-rose-800">
 							Reservar
 						</Button>
-					</div>
-				</div>
+					</form>
+				</section>
 			</div>
 		</>
 	)

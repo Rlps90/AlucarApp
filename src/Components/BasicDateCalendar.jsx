@@ -8,7 +8,7 @@ export default function BasicDateCalendar() {
 		<LocalizationProvider
 			dateAdapter={AdapterDayjs}
 			adapterLocale="pt-br">
-			<DatePicker disablePast />
+			<DatePicker disablePast/>
 		</LocalizationProvider>
 	)
 }

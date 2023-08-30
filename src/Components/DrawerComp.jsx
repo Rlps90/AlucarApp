@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Title from './Title'
 
 const DrawerComp = () => {
-	const [openDrawer, setopenDrawer] = useState(false)
+	const [openDrawer, setOpenDrawer] = useState(false)
 
 	const MENU = [
 		{
@@ -28,10 +28,12 @@ const DrawerComp = () => {
 		<React.Fragment>
 			<Drawer
 				open={openDrawer}
-				onClose={() => setopenDrawer(false)}
+				onClose={() => setOpenDrawer(false)}
 				PaperProps={{
 					sx: {
-						backgroundColor: 'pink',
+						backgroundColor: '#212121',
+						color: 'white',
+						fontStyle: 'italic',
 					},
 				}}>
 				<List
@@ -56,7 +58,7 @@ const DrawerComp = () => {
 					</ul>
 				</List>
 			</Drawer>
-			<IconButton onClick={() => setopenDrawer(!openDrawer)}>
+			<IconButton onClick={() => setOpenDrawer(!openDrawer)}>
 				<MenuIcon />
 			</IconButton>
 		</React.Fragment>
