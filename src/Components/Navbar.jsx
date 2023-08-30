@@ -29,7 +29,7 @@ const Navbar = () => {
 			<nav className="flex flex-row justify-between items-center w-[95%] mx-auto pb-4 py-4">
 				<a
 					href="/"
-					className="flex flex-row mr-3 w-auto overflow-hidden text-[1.75rem] pl-2 uppercase font-bold">
+					className="flex flex-row mr-3 w-auto overflow-hidden text-[1.75rem] pl-2 uppercase font-bold items-center">
 					<img
 						src={logo}
 						alt="logo"
