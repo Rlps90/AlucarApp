@@ -11,7 +11,7 @@ const Home = () => {
 
 	return (
 		<>
-			<div className='bg-[url("/src/assets/hero-bg.jpg")]'>
+			<div className='bg-[url("/src/assets/hero-bg.jpg")] min-h-screen '>
 				<div className="font-bold tracking-wide pt-6 drop-shadow-md">
 					<h1 className="text-4xl italic">Faça sua reserva agora</h1>
 				</div>
@@ -47,7 +47,7 @@ const Home = () => {
 						/>
 						<Button
 							variant="contained"
-							className="justify-self-center bg-rose-400 hover:bg-rose-800">
+							className="bg-yellow-700 hover:bg-yellow-900">
 							Reservar
 						</Button>
 					</form>

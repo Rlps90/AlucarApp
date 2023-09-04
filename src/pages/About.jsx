@@ -1,6 +1,6 @@
 const About = () => {
 	return (
-		<section className="container mx-auto p-6 flex w-1/2">
+		<section className="bg-blue-gray-800 mx-auto p-6 flex w-1/2">
 			<h1>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae magnam,
 				officiis rem iusto assumenda, sint et nisi similique, aliquam saepe ut

@@ -4,6 +4,24 @@ import mobi from './assets/mobi23.jpg'
 import onix from './assets/onix23.jpg'
 import p208 from './assets/peugeot208-23.jpg'
 
+export const MENU = [
+	{
+		id: 1,
+		title: 'Home',
+		link: '/',
+	},
+	{
+		id: 2,
+		title: 'Sobre',
+		link: '/about',
+	},
+	{
+		id: 3,
+		title: 'Carros',
+		link: '/carros',
+	},
+]
+
 export const carros = [
 	{
 		id: 1,
