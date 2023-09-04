@@ -26,18 +26,15 @@ const Navbar = () => {
 
 	return (
 		<header className="bg-gradient-to-b from-emerald-900 to-emerald-500">
-			<nav className="flex flex-row justify-between items-center w-[95%] mx-auto pb-4 py-4">
+			<nav className="flex flex-row justify-between items-center w-[95%] mx-auto py-4">
 				<a
 					href="/"
-					className="flex flex-row mr-3 w-auto overflow-hidden text-[1.75rem] pl-2 uppercase font-bold items-center">
+					className="flex flex-row text-[1.75rem] uppercase">
 					<img
 						src={logo}
 						alt="logo"
-						className="rounded-md max-w-[10vh] mr-3"
+						className="rounded-md max-w-[75px] mr-3"
 					/>
-					<div className="invisible lg:visible">
-						<Title text="Alucar" />
-					</div>
 				</a>
 
 				<div className="">
