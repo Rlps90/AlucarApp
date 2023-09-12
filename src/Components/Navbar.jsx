@@ -1,81 +1,3 @@
-// import DrawerComp from './DrawerComp'
-// import { Route, Routes, Link } from 'react-router-dom'
-// import { Button } from '@mui/material'
-// import Crud from './CRUD/Crud'
-// import logo from '../assets/alucar-logo.png'
-
-// const Navbar = () => {
-// 	const MENU = [
-// 		{
-// 			id: 1,
-// 			title: 'Home',
-// 			link: '/',
-// 		},
-// 		{
-// 			id: 2,
-// 			title: 'Sobre',
-// 			link: '/about',
-// 		},
-// 		{
-// 			id: 3,
-// 			title: 'Carros',
-// 			link: '/carros',
-// 		},
-// 	]
-
-// 	return (
-// 		<header className="bg-gradient-to-b from-emerald-900 to-emerald-500">
-// 			<nav className="flex flex-row justify-between items-center w-[95%] py-4">
-// 				<a
-// 					href="/"
-// 					className="flex flex-row text-[1.75rem] uppercase">
-// 					<img
-// 						src={logo}
-// 						alt="logo"
-// 						className="rounded-md max-w-[75px] mr-3"
-// 					/>
-// 				</a>
-
-// 				<div className="">
-// 					<ul className="flex items-center invisible lg:visible gap-[4vw] uppercase">
-// 						{MENU.map((item) => {
-// 							const { id, title, link } = item
-// 							return (
-// 								<li key={id}>
-// 									<a
-// 										href={link}
-// 										className="text-zinc-200 hover:text-rose-500 text-xl font-semibold">
-// 										{title}
-// 									</a>
-// 								</li>
-// 							)
-// 						})}
-// 					</ul>
-// 				</div>
-
-// 				<div>
-// 					<Button
-// 						type="button"
-// 						className="relative flex bg-[#19571e] hover:bg-[#70d14a] rounded-full px-3 py-1 w-auto items-center justify-center text-zinc-200 text-xl">
-// 						<Link to={`CRUD/Crud`}>Login</Link>
-// 					</Button>
-// 				</div>
-
-// 				<div className="ml-2 -my-1 lg:hidden bg-[#19571e] hover:bg-[#70d14a] rounded-lg">
-// 					<DrawerComp />
-// 				</div>
-// 			</nav>
-
-// 			<Routes>
-// 				<Route
-// 					path="/CRUD/Crud"
-// 					element={<Crud />}
-// 				/>
-// 			</Routes>
-// 		</header>
-// 	)
-// }
-// export default Navbar
 import {
 	Navbar,
 	Collapse,
@@ -134,12 +56,16 @@ export default function NavbarDefault() {
 		</ul>
 	)
 
+	const openInNewTab = (url) => {
+		window.open(url, '_blank', 'noreferrer')
+	}
+
 	return (
 		<Navbar className="relative bg-yellow-700 w-full max-w-none py-2 px-4 rounded-none border-none">
 			<div className="mx-auto flex items-center justify-between text-blue-gray-900">
 				<Typography
 					as="a"
-					href="#"
+					href="/"
 					className="mr-4 cursor-pointer py-1.5 font-medium">
 					<img
 						src={logo}
@@ -151,9 +77,11 @@ export default function NavbarDefault() {
 				<Button
 					variant="gradient"
 					size="sm"
-					className="hidden lg:inline-block">
+					className="hidden lg:inline-block"
+					onClick={() => openInNewTab('http://localhost:5173/SignIn')}>
 					<span>Login</span>
 				</Button>
+
 				<IconButton
 					variant="text"
 					className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

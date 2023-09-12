@@ -2,6 +2,8 @@ import Navbar from './Components/Navbar'
 import CarrosAluguel from './pages/CarrosAluguel'
 import Home from './pages/Home'
 import About from './pages/About'
+import SignIn from './Components/auth/SignIn'
+import SignUp from './Components/auth/SignUp'
 import { Routes, Route } from 'react-router-dom'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 
@@ -17,7 +19,7 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route
-						path=""
+						path="/"
 						element={<Home />}
 					/>
 					<Route
@@ -27,6 +29,14 @@ function App() {
 					<Route
 						path="/carros"
 						element={<CarrosAluguel />}
+					/>
+					<Route
+						path="/SignIn"
+						element={<SignIn />}
+					/>
+					<Route
+						path="/SignUp"
+						element={<SignUp />}
 					/>
 				</Routes>
 			</main>
