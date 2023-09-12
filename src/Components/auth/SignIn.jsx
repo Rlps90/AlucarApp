@@ -48,7 +48,9 @@ const SignIn = () => {
 					<button
 						role="link"
 						className="font-bold text-lg"
-						onClick={() => openInNewTab('http://localhost:5173/SignUp')}>
+						onClick={() =>
+							openInNewTab('https://alucarapp-rlps90.netlify.app/SignUp')
+						}>
 						Create Account
 					</button>
 				</div>

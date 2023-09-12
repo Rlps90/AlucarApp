@@ -78,7 +78,9 @@ export default function NavbarDefault() {
 					variant="gradient"
 					size="sm"
 					className="hidden lg:inline-block"
-					onClick={() => openInNewTab('http://localhost:5173/SignIn')}>
+					onClick={() =>
+						openInNewTab('https://alucarapp-rlps90.netlify.app/SignIn')
+					}>
 					<span>Login</span>
 				</Button>
 
