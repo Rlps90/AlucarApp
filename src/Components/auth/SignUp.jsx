@@ -18,24 +18,30 @@ const SignUp = () => {
 	}
 
 	return (
-		<div>
+		<div className="flex bg-yellow-400 items-center justify-center h-full w-full">
 			<form
-				className="flex flex-col gap-4"
+				className="bg-orange-900 p-20 rounded-xl"
 				onSubmit={signUp}>
-				<h1>Create Account</h1>
-				<input
-					type="email"
-					placeholder="Enter your email"
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-				/>
-				<input
-					type="password"
-					placeholder="Enter your password"
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-				/>
-				<button type="submit">Submit</button>
+				<div className="flex flex-col gap-5">
+					<h1>Create Account</h1>
+					<input
+						type="email"
+						placeholder="Enter your email"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					<input
+						type="password"
+						placeholder="Enter your password"
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+					/>
+					<button
+						type="submit"
+						className="border-2 rounded border-black bg-purple-900 text-yellow-800 drop-shadow-xl hover:bg-purple-700">
+						Submit
+					</button>
+				</div>
 			</form>
 		</div>
 	)

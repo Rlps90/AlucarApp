@@ -79,7 +79,7 @@ export default function NavbarDefault() {
 					size="sm"
 					className="hidden lg:inline-block"
 					onClick={() =>
-						openInNewTab('https://alucarapp-rlps90.netlify.app/SignIn')
+						openInNewTab('/SignIn')
 					}>
 					<span>Login</span>
 				</Button>
@@ -90,6 +90,8 @@ export default function NavbarDefault() {
 					ripple={false}
 					onClick={() => setOpenNav(!openNav)}>
 					{openNav ? (
+
+						
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"

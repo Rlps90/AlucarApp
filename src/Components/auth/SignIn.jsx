@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { auth } from '../../Firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
+import AuthDetails from './authDetails'
 
 const SignIn = () => {
 	const [email, setEmail] = useState('')
@@ -49,10 +50,11 @@ const SignIn = () => {
 						role="link"
 						className="font-bold text-lg"
 						onClick={() =>
-							openInNewTab('https://alucarapp-rlps90.netlify.app/SignUp')
+							openInNewTab('/SignUp')
 						}>
 						Create Account
 					</button>
+					<AuthDetails />
 				</div>
 			</form>
 		</div>
